@@ -1,0 +1,270 @@
+
+@font-face {
+    font-family: "Monument";
+    src: url("./MonumentExtended-Regular.otf");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 100%;
+    /* font is now 10px not 16px */
+    background-color: black;
+    height: 100vh;
+    box-sizing: border-box;
+    overflow:hidden;
+}
+
+
+body {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5vw;
+    transition: opacity 0.5s ease-in-out; /* Duration should match the setTimeout in JS */
+    opacity: 1;
+}
+/* Fade-out class */
+body.fade-out {
+    opacity: 0;
+}
+
+::-webkit-scrollbar
+{
+    width: 0;
+}
+
+
+header {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.header {
+    height: auto;
+}
+
+.logo {
+    position: relative;
+    text-decoration: none;
+    bottom: 20px;
+    left: 50px;
+    display: flex;
+    margin: 10px auto;
+    /* Center the logo */
+    text-align: center;
+    /* Center align the logo */
+    align-items: left;
+    justify-content: space-between;
+}
+
+.links {
+    position: relative;
+    display: block;
+    text-align: center;
+    align-items: center;
+    font-size: 15px;
+    font-family: Cambria;
+    margin-top: 20px;
+    /* Add some space between logo and links */
+    gap: 5.5rem;
+    bottom: 111px;
+    left: 50px;
+}
+
+.links ul {
+    display: block;
+    margin: 10px 0;
+    list-style-type: none;
+    font-size: 18px;
+}
+
+.links ul li {
+    display: inline;
+    margin-right: 10px;
+    padding-right: 30px;
+}
+
+.links ul li a {
+    color: #b07739;
+    text-decoration: none;
+    letter-spacing: 3px;
+}
+
+.contact-container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    bottom: 120px;
+    right: 100px;
+}
+
+.contact-left{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+}
+
+.contact-left-title h2{
+    font-weight: 600;
+    color: white;
+    font-size: 60px;
+}
+
+.contact-left-title hr{
+    border: none;
+    width: 120px;
+    height: 5px;
+    background-color:rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+.contact-inputs{
+    width: 400px;
+    height: 40px;
+    outline: none;
+    padding-left: 25px;
+    font-weight: 500;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    border: 1px solid #b07739;
+    border-radius: 50px;
+    resize: none;
+}
+
+.contact-left textarea{
+    height: 100px;
+    padding-top: 15px;
+    border-radius: 20px;
+}
+
+.contact-inputs:focus{
+   box-shadow: 0 0 15px #b07739; ;
+}
+
+.contact-inputs::placeholder{
+    color: rgb(255, 255, 255);
+}
+
+.contact-left button{
+    display: flex;
+    align-items: center;
+    padding: 10px 30px;
+    font-size: 16px;
+    color: white;
+    gap: 10px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(270deg, #543310,#AF8F6F);
+    cursor: pointer;
+}
+
+.contact-right{
+    position: relative;
+    top: 70px;
+    justify-content: center;
+    align-items: center;
+
+}
+.contact-right h1{
+    position: relative;
+    margin: 10px;
+    left: 195px;
+    bottom: 100px;
+    font-size: 15px;
+    color: white;
+    font-weight: 50;
+}
+
+.contact-right .icon{
+    position: relative;
+    left: 245px;
+    bottom: 100px;
+}
+
+.contact-right a{
+    color: white;
+    justify-content: center;
+    justify-content: center;
+    align-items: center;
+}
+.contact-right ul li{
+    list-style: none;
+    position: relative;
+    left: 250px;
+    bottom: 100px;
+    padding-bottom: 10px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+.contact-right ul li a{
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 15px;
+    color: #b07739;
+    transition: .5s;
+}
+
+.contact-right a:hover{
+    text-shadow: 3px 3px 3px rgba(255, 255, 255, 0.793); /* Add text shadow on hover */
+    cursor: pointer;
+}
+
+.contact-right .details h1{
+    position: relative;
+    margin: 10px;
+    left: 220px;
+    font-size: 15px;
+    color: white;
+    font-weight: 50;
+}
+
+.contact-right .details ul li a{
+    position: relative;
+    right: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-right .details .phone{
+    position: relative;
+    left: -25px;
+    align-items: center;
+    justify-content: center;
+}
+
+@media(max-width:800px){
+    .logo{
+        width: 80vw;
+    }
+    .links{
+        width: 80vw;
+    }
+    .contact-inputs{
+        width: 80vw;
+    }
+    .contact-right{
+        display: none;
+    }
+    .contact-right .details{
+        display: none;
+    }
+}
+
+footer{
+    position: relative;
+    color: white;
+    bottom: 190px;
+    left: 320px;
+}
