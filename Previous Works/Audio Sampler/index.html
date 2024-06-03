@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sound Board</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="index.js"></script>
+</head>
+
+<body>
+  <!-- Header -->
+  <h1>Sound Board</h1>
+    
+  <!-- Sound buttons -->
+  <div class="soundboard">
+
+    <!-- Sound Box 1 -->
+    <div class="sound-box">
+      <div class="first">
+        <audio preload="auto" id="first-sound">
+          <source src="Audio Sampler/Audio/ah-ha.mp3" type="audio/mpeg">
+        </audio>
+        <button type="button" class="button" onclick="document.getElementById('first-sound').play()"> 1. <br><br> Ah-ha
+          <br><br> 01</button>
+      </div>
+    </div>
+
+    <!-- Sound Box 2 -->
+    <div class="second">
+      <div class="sound-box">
+        <audio preload="auto" id="second-sound">
+          <source src="Audio Sampler/Audio/back-of-the-net.mp3" type="audio/mpeg">
+        </audio>
+        <button type="button" class="button" onclick="document.getElementById('second-sound').play()"> 2. <br><br> Back
+          of
+          the net<br><br> 02</button>
+      </div>
+    </div>
+
+    <!-- Sound Box 3 -->
+    <div class="third">
+      <div class="sound-box">
+        <audio preload="auto" id="third-sound">
+          <source src="Audio Sampler/Audio/bangoutoforder.mp3" type="audio/mpeg">
+        </audio>
+        <button type="button" class="button" onclick="document.getElementById('third-sound').play()"> 3. <br><br> Bang
+          out
+          of order<br><br> 03</button>
+      </div>
+    </div>
+
+    <!-- Sound Box 4 -->
+    <div class="fourth">
+      <div class="sound-box">
+        <audio preload="auto" id="fourth-sound">
+          <source src="Audio Sampler/Audio/dan.mp3" type="audio/mpeg">
+        </audio>
+        <button type="button" class="button" onclick="document.getElementById('fourth-sound').play()"> 4. <br><br> Dan
+          <br><br> 04</button>
+      </div>
+    </div>
+
+    <!-- Sound Box 5 -->
+    <div class="fifth">
+      <div class="sound-box">
+        <audio preload="auto" id="fifth-sound">
+          <source src="Audio Sampler/Audio/emailoftheevening.mp3" type="audio/mpeg">
+        </audio>
+        <button type="button" class="button" onclick="document.getElementById('fifth-sound').play()"> 5. <br><br> Email
+          of
+          the evening <br><br> 05</button>
+      </div>
+    </div>
+
+    <!-- Sound Box 6 -->
+    <div class="sixth">
+      <div class="sound-box">
+        <audio preload="auto" id="sixth-sound">
+          <source src="Audio Sampler/Audio/hellopartridge.mp3" type="audio/mpeg">
+        </audio>
+        <button type="button" class="button" onclick="document.getElementById('sixth-sound').play()"> 6. <br><br> Hello
+          Partridge<br><br> 06</button>
+      </div>
+    </div>
+
+    <!-- Sound Box 7 -->
+    <div class="seventh">
+      <div class="sound-box">
+        <audio preload="auto" id="seventh-sound">
+          <source src="Audio Sampler/Audio/iateascotchegg.mp3" type="audio/mpeg">
+        </audio>
+        <button type="button" class="button" onclick="document.getElementById('seventh-sound').play()"> 7. <br><br> I
+          ate
+          a
+          scotchegg <br><br> 07</button>
+      </div>
+    </div>
+
+    <!-- Sound Box 8 -->
+    <div class="eigth">
+      <div class="sound-box">
+        <audio preload="auto" id="eigth-sound">
+          <source src="Audio Sampler/Audio/imconfused.mp3" type="audio/mpeg">
+        </audio>
+        <button type="button" class="button" onclick="document.getElementById('eigth-sound').play()"> 8. <br><br> Im
+          Confused <br><br> x08</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Text-to-speech section -->
+  <div class="texttospeech">
+    <input type="text" id="text-input" placeholder="Type text...">
+    <button style="background-color: #436850; color: antiquewhite;" type="button" id="text-to-speech">Play</button>
+  </div>
+
+  <!-- Owner's Information -->
+  <footer>
+    Copyright &copy; 2024 SoundBoard | Made by: Aviona Ramos
+  </footer>
+
+</body>
+
+</html>
