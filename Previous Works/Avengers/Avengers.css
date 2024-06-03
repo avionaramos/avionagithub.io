@@ -1,0 +1,690 @@
+body{
+    background-color: #190E21;
+}
+
+header{
+    background-color: #794676;
+    color: #fff;
+    padding: 10px 0px; /* Adjust padding as needed */
+    text-align: center;
+    width: 100%; /* Make header cover the entire width */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 10px;
+    font-size: 15px;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+    padding-right: 30px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 0.3em
+}
+
+.home {
+    display: flex; /* or use display: grid; */
+    justify-content: center; /* for flexbox */
+    align-items: center; /* for flexbox */
+}
+
+
+.title {
+    padding: 10px; /* Adjust padding as needed */
+    width: 98%;
+    height: 250px;
+    align-items: center;
+    text-align: center;
+    padding-top: 330px;
+    transition: 0.5;
+}
+
+.title h1{
+    font-family: 'Poppins';
+    font-size: 25px;
+    font-weight: 600;
+    color: #fff;
+    justify-items: center;
+    text-align: center;
+    letter-spacing: 0.5em;
+}
+.title h1:hover{
+    -webkit-text-stroke: 2px #8b8b8b;
+    color:transparent
+}
+#about{
+    border-top: 1px solid #ffffff;
+    width: 100%;
+}
+
+#about h2{
+    color: #fff;
+    margin-left: 850px;
+    font-size: 25px;
+    margin-top: 180px;
+}
+
+.marvel {
+    position: relative;
+    padding-left: 100px; /* Adjust padding-left as needed */
+}
+
+.marvel p {
+    position: absolute;
+    bottom: 20px; 
+    right: 0; /* Align to the right side */
+    font-family: 'Poppins';
+    color: #ffffff;
+    font-size: 18px;
+    text-align: justify;
+    margin-left: 600px;
+    margin-right: 30px; /* Adjust margin-right as needed */
+}
+
+.marvel a {
+    position: absolute;
+    bottom: 0px; /* Adjust the top position as needed */
+    left: 0; /* Align to the left side */
+    background-color: #794676;
+    color: #fff;
+    padding: 5px;
+    margin-left: 600px; /* Adjust margin-left as needed */
+    /* bottom: 50px; Remove or adjust bottom property */
+}
+
+.image-box {
+    background-color: #525471;
+    padding: 50px;
+    width: 450px; /* Adjust width as needed */
+    height: 100px; /* Adjust height as needed */
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+#plot{
+    color: #fff;
+    text-align: center;
+    font-size: 25px;
+    margin-top: 165px;
+    border-top: 1px solid #ffffff;
+    width: 100%;
+    padding-top: 10px;
+}
+
+.image-box2 {
+    background-color: #525471;
+    padding: 50px;
+    width: 1080px; /* Adjust width as needed */
+    height: 80px; /* Adjust height as needed */
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.avengers p{
+    font-size: 17px;
+    text-align: justify;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#cast h3{
+    color: #fff;
+    text-align: center;
+    font-size: 25px;
+    margin-top: 50px;
+    border-top: 1px solid #ffffff;
+    width: 100%;
+    padding-top: 30px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.container .box1{
+    position: relative;
+    width: 200px;
+    height: 180px;
+    padding: 40px;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+    border-radius: 4px;
+    margin-top: 20px;
+    box-sizing:border-box;
+    overflow: hidden;
+    text-align: center;
+}
+.container .box1 .icon{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    color: #fff;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    font-size: 12px;
+    font-weight: 500;
+    transition: 1s;
+}
+
+.container .box1:nth-child(1) .icon{
+    box-shadow: 0 0 0 0 #525471;
+    background: #525471;
+}
+
+.container .box1:nth-child(1):hover .icon{
+    box-shadow: 0 0 0 400px #525471;
+}
+
+.container .box2{
+    position: relative;
+    width: 200px;
+    height: 180px;
+    padding: 40px;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+    border-radius: 4px;
+    margin-top: 20px;
+    box-sizing:border-box;
+    overflow: hidden;
+    text-align: center;
+}
+.container .box2 .icon{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    color: #fff;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    font-size: 12px;
+    font-weight: 500;
+    transition: 1s;
+}
+
+.container .box2:nth-child(2) .icon{
+    box-shadow: 0 0 0 0 #525471;
+    background: #525471;
+}
+
+.container .box2:nth-child(2):hover .icon{
+    box-shadow: 0 0 0 400px #525471;
+}
+
+.container .box3{
+    position: relative;
+    width: 200px;
+    height: 180px;
+    padding: 40px;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+    border-radius: 4px;
+    margin-top: 20px;
+    box-sizing:border-box;
+    overflow: hidden;
+    text-align: center;
+}
+.container .box3 .icon{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    color: #fff;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    font-size: 12px;
+    font-weight: 500;
+    transition: 1s;
+}
+
+.container .box3:nth-child(3) .icon{
+    box-shadow: 0 0 0 0 #525471;
+    background: #525471;
+}
+
+.container .box3:nth-child(3):hover .icon{
+    box-shadow: 0 0 0 400px #525471;
+}
+
+.container .box4{
+    position: relative;
+    width: 200px;
+    height: 180px;
+    padding: 40px;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+    border-radius: 4px;
+    margin-top: 20px;
+    box-sizing:border-box;
+    overflow: hidden;
+    text-align: center;
+}
+.container .box4 .icon{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    color: #fff;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    font-size: 12px;
+    font-weight: 500;
+    transition: 1s;
+}
+
+.container .box4:nth-child(4) .icon{
+    box-shadow: 0 0 0 0 #525471;
+    background: #525471;
+}
+
+.container .box4:nth-child(4):hover .icon{
+    box-shadow: 0 0 0 400px #525471;
+}
+
+.container .box5{
+    position: relative;
+    width: 200px;
+    height: 180px;
+    padding: 40px;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+    border-radius: 4px;
+    margin-top: 20px;
+    box-sizing:border-box;
+    overflow: hidden;
+    text-align: center;
+}
+.container .box5 .icon{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    color: #fff;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    font-size: 12px;
+    font-weight: 500;
+    transition: 1s;
+}
+
+.container .box5:nth-child(5) .icon{
+    box-shadow: 0 0 0 0 #525471;
+    background: #525471;
+}
+
+.container .box5:nth-child(5):hover .icon{
+    box-shadow: 0 0 0 400px #525471;
+}
+
+.container .box6{
+    position: relative;
+    width: 200px;
+    height: 180px;
+    padding: 40px;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+    border-radius: 4px;
+    margin-top: 50px;
+    box-sizing:border-box;
+    overflow: hidden;
+    text-align: center;
+}
+.container .box6 .icon{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    color: #fff;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    font-size: 12px;
+    font-weight: 500;
+    transition: 1s;
+}
+
+.container .box6:nth-child(6) .icon{
+    box-shadow: 0 0 0 0 #525471;
+    background: #525471;
+}
+
+.container .box6:nth-child(6):hover .icon{
+    box-shadow: 0 0 0 400px #525471;
+}
+
+.container .box7{
+    position: relative;
+    width: 200px;
+    height: 180px;
+    padding: 40px;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+    border-radius: 4px;
+    margin-top: 50px;
+    box-sizing:border-box;
+    overflow: hidden;
+    text-align: center;
+}
+.container .box7 .icon{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    color: #fff;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    font-size: 12px;
+    font-weight: 500;
+    transition: 1s;
+}
+
+.container .box7:nth-child(7) .icon{
+    box-shadow: 0 0 0 0 #525471;
+    background: #525471;
+}
+
+.container .box7:nth-child(7):hover .icon{
+    box-shadow: 0 0 0 400px #525471;
+}
+.container .box8{
+    position: relative;
+    width: 200px;
+    height: 180px;
+    padding: 40px;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+    border-radius: 4px;
+    margin-top: 50px;
+    box-sizing:border-box;
+    overflow: hidden;
+    text-align: center;
+}
+.container .box8 .icon{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    color: #fff;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    font-size: 12px;
+    font-weight: 500;
+    transition: 1s;
+}
+
+.container .box8:nth-child(8) .icon{
+    box-shadow: 0 0 0 0 #525471;
+    background: #525471;
+}
+
+.container .box8:nth-child(8):hover .icon{
+    box-shadow: 0 0 0 400px #525471;
+}
+.container .box9{
+    position: relative;
+    width: 200px;
+    height: 180px;
+    padding: 40px;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+    border-radius: 4px;
+    margin-top: 50px;
+    box-sizing:border-box;
+    overflow: hidden;
+    text-align: center;
+}
+.container .box9 .icon{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    color: #fff;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    font-size: 12px;
+    font-weight: 500;
+    transition: 1s;
+}
+
+.container .box9:nth-child(9) .icon{
+    box-shadow: 0 0 0 0 #525471;
+    background: #525471;
+}
+
+.container .box9:nth-child(9):hover .icon{
+    box-shadow: 0 0 0 400px #525471;
+}
+.container .box10{
+    position: relative;
+    width: 200px;
+    height: 180px;
+    padding: 40px;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+    border-radius: 4px;
+    margin-top: 50px;
+    box-sizing:border-box;
+    overflow: hidden;
+    text-align: center;
+}
+.container .box10 .icon{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    color: #fff;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    font-size: 12px;
+    font-weight: 500;
+    transition: 1s;
+}
+
+.container .box10:nth-child(10) .icon{
+    box-shadow: 0 0 0 0 #525471;
+    background: #525471;
+}
+
+.container .box10:nth-child(10):hover .icon{
+    box-shadow: 0 0 0 400px #525471;
+}
+
+#overview {
+    color: #fff;
+    text-align: center;
+    border-top: 1px solid #ffffff;
+    width: 100%;
+    margin-top: 80px;
+    position: relative; /* Added position relative */
+}
+ #overview h3{
+    font-size: 25px;
+    padding-top: 50px;
+ }
+
+ #overview p {
+    position: relative;
+    font-size: 17px;
+    top: 5px; /* Adjust this value as needed */
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-bottom: 20px;
+ }
+
+ .directors {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 1px solid #964E59; /* Add border */
+    padding: 10px; /* Add padding */
+}
+
+.producer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 1px solid #964E59; /* Add border */
+    padding: 10px; /* Add padding */
+}
+
+.screenplay{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 1px solid #964E59; /* Add border */
+    padding: 10px; /* Add padding */
+}
+.executive{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 1px solid #964E59; /* Add border */
+    padding: 10px; /* Add padding */
+}
+.date{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 1px solid #964E59; /* Add border */
+    padding: 10px; /* Add padding */
+}
+
+#review {
+    color: #fff;
+    text-align: center;
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff ;
+    width: 100%;
+    position: relative; /* Added position relative */
+    padding-top: 80px;
+    padding-bottom: 260px;
+    margin-top: 190px;
+}
+
+#review h3 {
+    font-size: 25px;
+    position: relative; /* Add position relative */
+}
+
+.image-box9{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 1px solid #964E59; /* Add border */
+    padding: 10px; /* Add padding */
+    font-size: 15px;
+    width: 250px;
+    height: 150px;
+    top: 170px;
+}
+.image-box10{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-left: 320px;
+    margin-right: 10px;
+    border: 1px solid #964E59;
+    padding: 10px;
+    font-size: 15px;
+    width: 250px;
+    height: 150px;
+    position: absolute; /* Add position absolute */
+    top: 160px; /* Adjust this value as needed */
+}
+.image-box11{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-left: 620px;
+    margin-right: 10px;
+    border: 1px solid #964E59; /* Add border */
+    padding: 10px; /* Add padding */
+    font-size: 15px;
+    width: 250px;
+    height: 150px;
+    position: absolute; /* Add position absolute */
+    top: 160px; /* Adjust this value as needed */
+}
+.image-box12{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-left: 920px;
+    margin-right: 10px;
+    border: 1px solid #964E59; /* Add border */
+    padding: 10px; /* Add padding */
+    font-size: 15px;
+    width: 250px;
+    height: 150px;
+    position: absolute; /* Add position absolute */
+    top: 160px; /* Adjust this value as needed */
+}
+
+.copyright{
+    background-color: #794676;
+    margin-top: 10px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.copyright p{
+    color: #fff;
+    padding-bottom: 10px;
+}
+
+.mcu{
+    color: #fff;
+}
+
+
