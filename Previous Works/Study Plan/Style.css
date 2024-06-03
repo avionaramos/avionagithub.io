@@ -1,0 +1,445 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Times New Roman;
+}
+
+body{
+    background-color: #FDF7E4;
+}
+
+
+nav{
+    width: 97%;
+    height: 75px;
+    background-color: #dbc8a6;;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 60px;
+    position: relative;
+    top: 0;
+    z-index: 1;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.logo{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.navigation-menu{
+    width: 65%;
+    display: flex;
+    justify-content: right;
+    list-style: none;
+}
+
+.navigation-menu li{
+    margin-left: 20px;
+    margin-right: 15px;
+}
+
+.navigation-menu li a{
+    font-size: 19px;
+    color: black;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.navigation-menu li a:hover{
+    color: white;
+}
+
+.search-bar{
+    display: flex;
+    align-items: center;
+    margin-right: 0;
+}
+
+.search-bar form{
+    display: flex;
+    margin-top: 0;
+}
+
+.search-bar input{
+    padding: 5px;
+    border: 1px solid black;
+    outline: none;
+    border-radius: 2px;
+    margin-right: 5px;
+    font-size: 12px;
+}
+
+.search-bar input:hover{
+    border: 1px solid white;
+}
+
+.search-bar button{
+    padding: 5px;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.search-bar button:hover{
+    background-color: #acacac;
+}
+
+.reminder {
+    flex-basis: 100%; /* Take up full width */
+    text-align: center; /* Center text */
+    margin: 20px;
+    border: 1px solid #876932;
+    border-radius: 10px;
+    box-shadow: 0 5px 9px rgba(0, 0, 0, 0.1);
+    padding: 10px; /* Add padding */
+    position: relative; /* Position relative to allow z-index */
+    z-index: 1; 
+}
+
+.modules h3{
+    font-size: 25px;
+    text-align: left;
+    color: black;
+    margin-top: 50px;
+    margin-left: 35px;
+}
+
+.flip-card{
+    width:360px;
+    height: 360px;
+    margin: 20px;
+    margin-right: 5px;
+    display:inline-block;
+    padding-left: 20px;
+
+}
+
+.flip-card-back{
+    background-color: #DED0B6;
+    color: white;
+    transform: rotateY(180deg);
+    z-index: 1;
+}
+
+.flip-card-front{
+    background-color: #d9c49f;
+    border: 1px solid #6d511c;
+    box-shadow: 0 5px 9px rgba(0, 0, 0, 0.661); 
+}
+
+.flip-card-front img{
+    text-align: center;
+    position: relative;
+    left: 95px;
+    top: 80px;
+}
+.flip-card-front h2{
+    margin-top: 20px;
+    margin-left: 25px;
+    padding:5px;
+    color: white;
+    border: 1px solid #826127;
+    box-shadow: 0 5px 9px rgba(0, 0, 0, 0.182); 
+    bottom: 20px;
+    position: absolute;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+    width:300px;
+}
+
+.flip-card-back .back-header{
+    height: 45%;
+    text-align: center;
+}
+
+.flip-card-back .back-header img{
+    width: 30%;
+    margin-top: 20px;
+}
+
+.flip-card-inner{
+    position: relative;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card-back, .flip-card-front{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.flip-card:hover .flip-card-inner{
+    transform: rotateY(180deg);
+}
+
+.back-footer h2{
+    text-align: center;
+    margin: 10px;
+    color: black;
+}
+
+.back-footer p{
+    text-align: justify;
+    font-size: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    color: black;
+}
+
+.additional h2{
+    background: #dbc8a6;
+    border: 1px solid #6d511c;
+    margin: 30px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.334);
+}
+
+.additional h2:hover{
+    color: #90780e;
+}
+
+.Schedule h3{
+    font-size: 25px;
+    text-align: left;
+    color: black;
+    margin-top: 50px;
+    margin-left: 230px;
+}
+
+.calendar{
+    background: #DED0B6;
+    width: 500px;
+    height: 430px;
+    margin-top: 30px;
+    margin-left: 35px;
+    align-items: center;
+    border: 15px solid #fff;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .5);
+}
+
+.calendar .date{
+    width: 400px;
+    padding: 30px;
+    box-sizing: border-box;
+    margin-bottom: 0px;
+
+}
+
+.calendar .date h2{
+    font-size: 25px;
+    font-weight: 500;
+    text-align: center;
+    margin-left: 70px;
+}
+
+.date p{
+    margin-left: 190px; 
+}
+.calendar .image{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 400px;
+    height: 100%;
+    background: #000;
+
+}
+
+.calendar .image img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.calendar .days {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.calendar  .days .day,
+.calendar  .days .number {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.calendar  .days .day.active{
+    color: #ff2200;
+    font-weight: 600;
+}
+.calendar  .days .number.red{
+    color: #ff2200;
+    font-weight: 600;
+}
+
+.calendar  .days .number.active{
+    background: #c09a59;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+.upcoming-tasks {
+    width: 300px; /* Adjust width as needed */
+    position: relative;
+    margin-top: 30px;
+}
+
+.upcoming-tasks h3 {
+    font-size: 20px;
+    text-align: left;
+    color: #6d511c;
+    position: relative;
+    margin-bottom: 20px;
+    bottom: 470px;
+    left: 820px; /* Adjust distance from the calendar */
+
+}
+
+.task {
+    background-color: #DED0B6;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #6d511c;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.158);
+    width: 210%;
+    position: relative;
+    bottom: 470px;
+    left: 570px; /* Adjust distance from the calendar */
+}
+
+.task h4 {
+    margin: 10px;
+    text-decoration: underline;
+    color:#876932;
+}
+
+.task ul {
+    margin-left: 40px;
+}
+
+.last-task {
+    background-color: #DED0B6;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #6d511c;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.158);
+    width: 210%;
+    position: relative;
+    bottom: 470px;
+    left: 570px; /* Adjust distance from the calendar */
+}
+
+.last-task h4 {
+    margin: 10px;
+    text-decoration: underline;
+    color:#876932;
+    font-size: 20px;
+}
+
+.Resources{
+    text-align: center;
+    align-items: center;
+    position: relative;
+
+}
+.Resources h3{
+    padding: 15px;
+    margin-left: 40px;
+    position: absolute;
+    bottom: 320px;
+    background: #DED0B6;
+    border: 2px solid #6d511c;
+    border-radius: 30px;
+    
+}
+
+.w3school{
+    position: relative;
+    bottom: 380px;
+    text-align: center;
+    border: 1px solid #876932;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.158);
+    padding: 10px;
+    border-radius: 50px;
+    width: 93%;
+    left: 60px;
+}
+
+.webdocs{
+    position: relative;
+    bottom: 360px;
+    text-align: center;
+    border: 1px solid #876932;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.158);
+    padding: 10px;
+    border-radius: 50px;
+    width: 93%;
+    left: 60px;
+}
+
+.code{
+    position: relative;
+    bottom: 345px;
+    text-align: center;
+    border: 1px solid #876932;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.158);
+    padding: 10px;
+    border-radius: 50px;
+    width: 93%;
+    left: 60px;
+}
+
+.java{
+    position: relative;
+    bottom: 330px;
+    text-align: center;
+    border: 1px solid #876932;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.158);
+    padding: 10px;
+    border-radius: 50px;
+    width: 93%;
+    left: 60px;
+}
+
+.copyright{
+    position:relative;
+    bottom: 290px;
+    background-color: #dbc8a6;
+    padding: 10px;
+    text-align: center;
+    margin: 20px;
+    margin-bottom: 0px 20px;
+}
+
+
+
+
