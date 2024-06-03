@@ -1,0 +1,59 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-image: url(Images/Background-image.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.soundboard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+
+.sound-box {
+  padding: 10px; /* Add some padding */
+  border-radius: 5px; /* Rounded corners */
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: #436850;
+  box-shadow: 0 5px 9px rgba(0, 0, 0, 0.796);
+  width: 200px;
+  height: 170px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.1s;
+}
+
+.button:hover {
+  width: 200px;
+  height: 170px;
+  background-color: #12372A; /* darker shade of dodgerblue */
+}
+
+.texttospeech{
+  position: relative;
+  float: right;
+  right: 490px;
+}
+
+footer{
+  margin-top: 40px;
+  text-align: right;
+  padding-right: 400px;
+}
