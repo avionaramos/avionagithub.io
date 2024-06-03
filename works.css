@@ -1,0 +1,408 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 100%;
+    /* font is now 10px not 16px */
+    background-color: black;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+body.animate-homepage {
+    animation: circleTransition 2s ease forwards;
+}
+
+@font-face {
+    font-family: "Monument";
+    src: url("./MonumentExtended-Regular.otf");
+}
+
+body {
+    position: relative;
+    border-radius: 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5vw;
+    clip-path: circle(150% at 50% 50%);
+    overflow-x: hidden;
+    transition: opacity 0.5s ease-in-out;
+    /* Duration should match the setTimeout in JS */
+    opacity: 1;
+}
+
+/* Fade-out class */
+body.fade-out {
+    opacity: 0;
+    transition: opacity 0.8s ease-out;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.header {
+    height: auto;
+}
+
+.logo {
+    position: relative;
+    text-decoration: none;
+    bottom: 20px;
+    left: 50px;
+    display: flex;
+    margin: 10px auto;
+    /* Center the logo */
+    text-align: center;
+    /* Center align the logo */
+    align-items: left;
+    justify-content: space-between;
+}
+
+.links {
+    position: relative;
+    display: block;
+    text-align: center;
+    align-items: center;
+    font-size: 15px;
+    font-family: Cambria;
+    margin-top: 20px;
+    /* Add some space between logo and links */
+    gap: 5.5rem;
+    bottom: 111px;
+    left: 50px;
+}
+
+.links ul {
+    display: block;
+    margin: 10px 0;
+    list-style-type: none;
+    font-size: 18px;
+}
+
+.links ul li {
+    display: inline;
+    margin-right: 10px;
+    padding-right: 30px;
+}
+
+.links ul li a {
+    color: #b07739;
+    text-decoration: none;
+    letter-spacing: 3px;
+}
+
+a,
+a:visited,
+a:hover {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.works {
+    position: relative;
+    bottom: 200px;
+    right: 210px;
+    overflow: visible;
+    /* Ensure the hover image is not clipped */
+    display: grid;
+}
+
+.title h1 {
+    position: relative;
+    top: 210px;
+    right: 540px;
+    letter-spacing: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #b07739;
+    transform: rotate(-90deg);
+    /* Rotate the text to the left by 10 degrees */
+}
+
+.works ul {
+    width: 200%;
+}
+
+.works ul li {
+    border-bottom: .05rem solid white;
+    position: relative;
+    z-index: 10;
+}
+
+.works ul li .link {
+    display: flex;
+    padding: 2rem 0 3rem 0;
+    z-index: 10;
+    justify-content: space-between;
+}
+
+.works ul li .link span {
+    display: flex;
+    font-weight: 600;
+    z-index: 10;
+    mix-blend-mode: difference;
+    display: inline-block;
+    position: relative;
+    color: #fff;
+    text-shadow: 0 10px 10px #ffffff3f;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+.works ul li .link>img {
+    position: relative;
+    top: 20px;
+    mix-blend-mode: difference;
+    z-index: 10;
+}
+
+.hover-reveal {
+    position: absolute;
+    width: 350px;
+    height: auto;
+    pointer-events: none;
+    overflow: visible;
+    /* Ensure the image is not clipped */
+    opacity: 0;
+    transform: scale(0.5);
+    transition: all .2s ease-out;
+}
+
+.hover-reveal img {
+    width: 100%;
+    object-fit: cover;
+    transition: transform .5s ease-out;
+}
+
+
+@media(max-width: 800px) {
+    .works ul {
+        width: 100%;
+    }
+
+    .works ul li .link span {
+        font-size: 2.5rem;
+    }
+
+    .works ul li .link>img {
+        height: 50px;
+    }
+
+    .hover-reveal {
+        width: 350px;
+        height: auto;
+    }
+}
+
+h3 {
+    position: relative;
+    color: #fff;
+    bottom: 50px;
+    font-size: 40px;
+}
+
+h3:hover {
+    background-color: #000000cb;
+    color: #b07739;
+    cursor: pointer;
+}
+
+.slider {
+    bottom: 70px;
+    height: 270px;
+    margin: auto;
+    margin-bottom: 10px;
+    position: relative;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    /* Ensure nothing overflows */
+}
+
+.slide-track {
+    display: flex;
+    width: calc(270px * 18);
+    animation: scroll 30s linear infinite;
+}
+
+.slide-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-270px * 9));
+    }
+}
+
+.slide {
+    height: 220px;
+    width: 270px;
+    /* Adjust width to fit within the container */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Center the image */
+    padding: 10px;
+    perspective: 100px;
+    box-sizing: border-box;
+    /* Include padding in the width/height */
+}
+
+.slide img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    /* Maintain aspect ratio and cover the slide area */
+    transition: transform 0.3s ease;
+    /* Adjusted the transition time for smoothness */
+}
+
+.slide img:hover {
+    box-shadow: 10px 10px 30px -5px rgba(255, 255, 255, 0.497);
+    transform: scale(1.1);
+}
+
+.slider::before,
+.slider::after {
+    background: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+    content: "";
+    height: 100%;
+    position: absolute;
+    width: 20%;
+    z-index: 2;
+}
+
+.slider::before {
+    left: 0;
+    top: 0;
+}
+
+.slider::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+
+footer {
+    width: 100%;
+    background-color: #70472775;
+    ;
+    padding: 10px;
+}
+
+.social {
+    display: flex;
+    justify-content: right;
+}
+
+.social .icon {
+    position: relative;
+    top: 25px;
+    right: 400px;
+    display: flex;
+    background-color: rgb(158, 158, 158);
+    color: var(--color);
+    border-radius: 50%;
+    padding: 23px 15px 15px 15px;
+    margin: 10px;
+    width: 20px;
+    height: 10px;
+    font-size: 25px;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px #ffffff15;
+    cursor: pointer;
+    transition: color 0.1s ease, background-color 0.1s ease-in;
+}
+
+.social .tooltip {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    font-size: 14px;
+    color: white;
+    padding: 5px 8px;
+    background-color: #000;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px #00000015;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.1s var(--cb);
+}
+
+.social .tooltip::before {
+    content: "";
+    position: absolute;
+    height: 10px;
+    width: 8px;
+    background-color: #000;
+    bottom: -3px;
+    left: 55%;
+    transform: translate(-50%) rotate(50deg);
+    transition: all 0.1s var(--cb);
+}
+
+/* Hover */
+.social .icon:hover .tooltip {
+    top: -40px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.social .icon:hover,
+.social .icon:hover .tooltip,
+.social .icon:hover .tooltip::before {
+    background-color: var(--color);
+    color: white;
+}
+
+/* Force ion-icon elements to be black */
+.social .icon span ion-icon {
+    color: black !important;
+}
+
+.social h2 {
+    position: relative;
+    left: 150px;
+    color: white;
+    justify-content: right;
+    letter-spacing: 4px;
+}
+
+/* Fade-out animation */
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+
+.copyright p {
+    position: relative;
+    left: 550px;
+    padding: 10px;
+    font-size: 15px;
+    margin-left: 10px;
+    color: white;
+}
