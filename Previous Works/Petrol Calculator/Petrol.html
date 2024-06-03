@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petrol Calculator</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <!--Main Container-->
+    <section class="title">
+        <!--Title Page-->
+        <h1><i>Petrol Calculator</i></h1>
+        <!--User input for petrol-->
+        <div class="user-input">
+            <label for="petrol-cost-per-liter">Cost of petrol per liter:</label>
+            <input type="number" id="petrol-cost-per-liter" step="0.01" value="1.72" required>
+        </div>
+        <!--User input for liters consumed-->
+        <div class="user-input">
+            <label for="petrol-liters-consumed">Liters purchased:</label>
+            <input type="number" id="petrol-liters-consumed" step="0.01" value="0" required>
+        </div>
+        <!-- Button for calculation -->
+        <button id="calculate-btn">Estimate</button>
+        <p id="total-cost-petrol"></p>
+    </section>
+
+    <!--JavaScript file for handling calculations-->
+    <script src="Petrol.js"></script>
+    
+    <!--Owner's Information-->
+    <footer class="owner">
+        Copyright &copy; 2024 Petrol Calculator | Made by: Aviona Ramos
+    </footer>
+</body>
+</html>
