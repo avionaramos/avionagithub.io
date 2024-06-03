@@ -302,27 +302,27 @@ input:checked+label .description {
 }
 
 .card[for="c1"] {
-    background-image: url('/images/Python.JPG');
+    background-image: url('images/Python.JPG');
 }
 
 .card[for="c2"] {
-    background-image: url('/images/Python\ Inter.JPG');
+    background-image: url('images/Python\ Inter.JPG');
 }
 
 .card[for="c3"] {
-    background-image: url('/images/Python\ Developer.JPG');
+    background-image: url('images/Python\ Developer.JPG');
 }
 
 .card[for="c4"] {
-    background-image: url('/images/HTML.jpg');
+    background-image: url('images/HTML.jpg');
 }
 
 .card[for="c5"] {
-    background-image: url('/images/CSS.jpg');
+    background-image: url('images/CSS.jpg');
 }
 
 .card[for="c6"] {
-    background-image: url('/images/JavaScript.jpg');
+    background-image: url('images/JavaScript.jpg');
 }
 
 .education {
