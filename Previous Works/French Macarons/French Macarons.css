@@ -1,0 +1,282 @@
+/* Resetting styles for all elements */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Arial';
+}
+
+/* Background color of the body */
+body{
+    background-color: pink;
+}
+
+/*HEADER SECTION*/
+.logo{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 24px;
+    color: #430956;
+}
+
+/* Navigation Styles */
+.navigation {
+    margin-left: auto; /* Push navigation to the right*/
+}
+
+.navigation ul{
+    display: flex;
+    list-style: none;
+}
+
+.navigation ul li a{
+    display: block;
+    padding: 8px 25px;
+    color:#401d87;
+    font-size: 18px;
+    transition: .2s;
+    margin: 0;
+    text-decoration: none;
+    padding-right: 20px;
+}
+
+.navigation ul li:hover a{
+    background-color: #97a2a3;
+    color: #2067c3;
+    cursor: pointer;
+}
+
+/* Container Style*/
+.container{
+    width:100%;
+    height: 80vh;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+}
+
+/* Content Style */
+.content{
+    text-align: center;
+}
+
+.content h1{
+    color:#DA0C81;
+    font-size: 95px;
+    font-weight: 600;
+    margin-bottom: 50px;
+    transition: 0.5;
+}
+
+.content h1:hover{
+    -webkit-text-stroke: 2px #fff;
+    color:transparent
+}
+
+.content a{
+    font-size: 24px;
+    color:antiquewhite;
+    text-decoration: none;
+    border: 2px solid #213032;
+    padding: 15px 25px;
+    border-radius: 50px;
+    transition: 0.3s
+}
+
+.content a:hover{
+    background-color: #289e90;
+    color: #000;
+    border: 2px solid #000;
+    cursor: pointer;
+}
+
+/* Header Section Style*/
+header {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Align items to the end (right side) */
+    padding: 0 20px; 
+    background: #FEC7B4;
+    padding-left: 50px;
+}
+
+/* Styling for a video in the background */
+.background-video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+/* Media queries for responsive background video */
+@media (min-aspect-ratio: 16/9) {
+    .background-video{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .background-video{
+        width: auto;
+        height: 100%;
+    }
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/*DESCRIPTION SECTION*/
+/* Image Box Style*/
+.image-box {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    width: 90%;
+    margin: 50px auto;
+    padding: 30px;
+    border: 1px solid #1279a5;
+    box-shadow: 0 5px 9px rgba(0, 0, 0, 0.1);
+    margin-top: 100px;
+}
+
+.image-box h3 {
+    color: #1279a5;
+    font-family: 'Poppins';
+    padding-top: 10px;
+    padding-left: 550px;
+    font-size: 25px;
+}
+
+.image {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between; /* Space between items */
+    align-items: center; 
+    box-shadow: #000;
+}
+
+.image img {
+    max-width: 25%;
+    height: auto;
+    margin-right: 15px;
+}
+
+.image p {
+    flex: 1;
+    font-family: 'Poppins';
+    color: #000;
+    font-size: 20px;
+    margin: 0;
+    text-align: justify;
+    padding-left: 10px;
+}
+
+/*Ingredients Section Style*/
+.container2 {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    width: 90%;
+    margin: 50px auto;
+    padding: 30px;
+    border: 1px solid #9f2cc5;
+    box-shadow: 0 5px 9px rgba(0, 0, 0, 0.1);
+    margin-top: 100px;
+}
+
+.container2 h2{
+    flex: 1;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 30px;
+    color: #9f2cc5;
+    font-family: 'Poppins';
+}
+
+.recipecard {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between; /*space between items */
+    align-items: center; 
+    margin-top: 10px; 
+}
+
+.recipecard img {
+    max-width: 45%;
+    height: auto;
+    order: 2; /* Move the image to the end (right side) */
+    box-shadow: 0 5px 9px rgba(0, 0, 0, 0.1);
+    border: #000;
+}
+
+.recipecard ul {
+    flex: 1;
+    padding: 50px;
+}
+
+.recipecard ul li {
+    font-family: 'Poppins';
+    color: #000;
+    font-size: 25px;
+    margin: 0;
+    text-align: justify;
+    padding-left: 0px;
+}
+
+/*Directions Section Style*/
+.method {
+    display: flex;
+    flex-direction: column; 
+    width: 90%;
+    margin: 50px auto;
+    padding: 30px;
+    border: 1px solid #09886a;
+    box-shadow: 0 5px 9px rgba(0, 0, 0, 0.1);
+    margin-top: 100px;
+}
+
+.method h2 {
+    flex: 1;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 30px;
+    color: #09886a;
+    font-family: 'Poppins';
+}
+
+.recipecard2 img {
+    max-width: 20%;
+    height: auto;
+    align-items: center;
+    margin-left: 45px;
+}
+
+.directions {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between; /* Space between items */
+    align-items: center; 
+    box-shadow: #000;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.directions ol li {
+    flex: 1;
+    font-family: 'Poppins';
+    color: #000;
+    font-size: 15px;
+    margin: 0;
+    text-align: justify;
+    padding-left: 0px;
+}
+
+/*Footer Section*/
+p{
+    margin-left: 1000px;
+}
