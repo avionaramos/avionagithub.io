@@ -1,0 +1,487 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 100%;
+    /* font is now 10px not 16px */
+    background-color: black;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+:root {
+    --cb: cubic-bezier(.68, -0.55, .26, 1.55);
+}
+
+/* Add the preloader styles */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    overflow-y: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    opacity: 1;
+}
+
+#preloader::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/noise-bg.gif');
+    opacity: 0.1;
+    /* Adjust this value to make the noise more or less visible */
+}
+
+#preloader.fade-out {
+    opacity: 0;
+    visibility: hidden;
+    transition: none;
+    /* Prevents flicker when the homepage animation starts */
+}
+
+.preloader.hidden {
+    display: none;
+}
+
+.loader {
+    position: fixed;
+    text-align: center;
+    top: 280px;
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+}
+
+.greeting {
+    position: fixed;
+    top: 250;
+    width: 100%;
+    font-size: 2rem;
+    color: white;
+    font-family: "Monument", sans-serif;
+    opacity: 0;
+    position: fixed;
+}
+
+/* Add keyframes for homepage transition */
+@keyframes circleTransition {
+    0% {
+        clip-path: circle(0% at 50% 50%);
+    }
+
+    100% {
+        clip-path: circle(150% at 50% 50%);
+    }
+}
+
+/* Apply the animation to the body */
+body.animate-homepage {
+    animation: circleTransition 2s ease forwards;
+}
+
+@font-face {
+    font-family: "Monument";
+    src: url("./MonumentExtended-Regular.otf");
+}
+
+body {
+    position: relative;
+    border-radius: 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5vw;
+    clip-path: circle(150% at 50% 50%);
+    overflow-x: hidden;
+    transition: opacity 1s ease-in-out;
+}
+
+body.fade-out {
+    opacity: .1;
+    transition: opacity 0.8s ease-in-out;
+    /* Match this duration with the setTimeout in JavaScript */
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/noise-bg.gif');
+    opacity: 0.1;
+    /* Adjust this value to make the noise more or less visible */
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.header {
+    height: auto;
+}
+
+.logo {
+    position: relative;
+    text-decoration: none;
+    bottom: 20px;
+    left: 50px;
+    display: flex;
+    margin: 10px auto;
+    /* Center the logo */
+    text-align: center;
+    /* Center align the logo */
+    align-items: left;
+    justify-content: space-between;
+}
+
+
+.links {
+    position: relative;
+    display: block;
+    text-align: center;
+    align-items: center;
+    font-size: 15px;
+    font-family: Cambria;
+    margin-top: 20px;
+    /* Add some space between logo and links */
+    gap: 5.5rem;
+    bottom: 111px;
+    left: 50px;
+}
+
+.links ul {
+    display: block;
+    margin: 10px 0;
+    list-style-type: none;
+    font-size: 18px;
+}
+
+.links ul li {
+    display: inline;
+    margin-right: 10px;
+    padding-right: 30px;
+}
+
+.links ul li a {
+    color: #b07739;
+    text-decoration: none;
+    letter-spacing: 4px;
+}
+
+.star {
+    position: relative;
+    bottom: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.splide-wrapper {
+    position: relative;
+    z-index: 1;
+    /* Ensure this is lower than the top image */
+    width: 100%;
+}
+
+.splide-container {
+    position: relative;
+    bottom: 120px;
+    height: 471px;
+}
+
+.splide-container .top-image {
+    position: absolute;
+    top: -9.8%;
+    left: 450px;
+    z-index: 2;
+    /* Ensure this is higher than the Splide carousel */
+}
+
+.splide {
+    position: relative;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease-out;
+    white-space: nowrap;
+    z-index: 1;
+    /* Ensure this is lower than the top image */
+}
+
+.splide .splide__track {
+    position: relative;
+    z-index: 1;
+    /* Ensure this is lower than the top image */
+    top: 350px;
+    background-color: #70472775;
+}
+
+.splide .splide__track ul {
+    overflow: visible;
+}
+
+.splide .splide__track ul li {
+    position: relative;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    font-size: 5.5rem;
+    text-transform: uppercase;
+    font-weight: 1000;
+    font-family: "Monument", sans-serif;
+    white-space: nowrap;
+    overflow: visible;
+}
+
+.splide .splide__track ul li img {
+    width: 6.4rem;
+    height: 6.4rem;
+}
+
+.splide .splide__track-1 ul li {
+    color: transparent;
+    -webkit-text-stroke: 1px #ffffff;
+    transition: transform 0.2s ease-in;
+}
+
+a,
+a:visited,
+a:hover {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.works {
+    position: relative;
+    bottom: 200px;
+    right: 210px;
+    overflow: visible;
+    display: grid;
+}
+
+.title h1 {
+    position: relative;
+    top: 210px;
+    right: 540px;
+    letter-spacing: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #b07739;
+    transform: rotate(-90deg);
+}
+
+.works ul {
+    width: 200%;
+}
+
+.works ul li {
+    border-bottom: .05rem solid white;
+    position: relative;
+    z-index: 10;
+}
+
+.works ul li .link {
+    display: flex;
+    padding: 2rem 0 3rem 0;
+    z-index: 10;
+    justify-content: space-between;
+}
+
+.works ul li .link span {
+    font-weight: 600;
+    z-index: 10;
+    mix-blend-mode: difference;
+    color: #fff;
+    text-shadow: 0 10px 10px #ffffff3f;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+.works ul li .link>img {
+    position: relative;
+    top: 20px;
+    mix-blend-mode: difference;
+    z-index: 10;
+}
+
+.hover-reveal {
+    position: absolute;
+    width: 350px;
+    height: auto;
+    pointer-events: none;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: all .2s ease-out;
+    z-index: 20;
+}
+
+.hover-reveal img {
+    width: 100%;
+    object-fit: cover;
+    transition: transform .5s ease-out;
+}
+
+@media(max-width: 800px) {
+    .works ul {
+        width: 100%;
+    }
+
+    .works ul li .link span {
+        font-size: 2.5rem;
+    }
+
+    .works ul li .link>img {
+        height: 50px;
+    }
+
+    .hover-reveal {
+        width: 350px;
+        height: auto;
+    }
+}
+
+.gallery h2 {
+    position: relative;
+    bottom: 70px;
+    left: 450px;
+    font-size: 40px;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.gallery .picture {
+    flex: 1 0 100px;
+    margin-top: 12px;
+    padding: 15px;
+    left: 50px;
+    position: relative;
+    display: inline;
+    flex-wrap: wrap;
+    bottom: 20px;
+}
+
+.picture img {
+    width: 150px;
+    height: auto;
+    transition: filter 0.5s, transform 0.5s;
+    cursor: pointer;
+    border: 2px solid white;
+    margin-top: 20px;
+}
+
+.picture img:hover {
+    box-shadow: 0 10px 10px #ffffffb2;
+    ;
+    transform: scale(1.1);
+}
+
+footer {
+    width: 100%;
+    background-color: #70472775;
+    padding: 20px;
+}
+
+.social {
+    display: flex;
+    justify-content: right;
+}
+
+.social .icon {
+    position: relative;
+    top: 20px;
+    right: 410px;
+    display: flex;
+    background-color: rgb(158, 158, 158);
+    color: var(--color);
+    border-radius: 50%;
+    padding: 23px 15px 15px 15px;
+    margin: 10px;
+    width: 10px;
+    height: 5px;
+    font-size: 20px;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px #ffffff15;
+    cursor: pointer;
+    transition: color 0.1s ease, background-color 0.1s ease-in;
+}
+
+.social .tooltip {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    font-size: 14px;
+    color: white;
+    padding: 5px 8px;
+    background-color: #000;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px #ffffff2e;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.1s var(--cb);
+}
+
+.social .tooltip::before {
+    content: "";
+    position: absolute;
+    height: 10px;
+    width: 8px;
+    background-color: #000;
+    bottom: -1px;
+    left: 55%;
+    transform: translate(-50%) rotate(50deg);
+    transition: all 0.1s var(--cb);
+}
+
+/* Hover */
+.social .icon:hover .tooltip {
+    top: -40px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.social .icon:hover,
+.social .icon:hover .tooltip,
+.social .icon:hover .tooltip::before {
+    background-color: var(--color);
+    color: white;
+}
+
+/* Force ion-icon elements to be black */
+.social .icon span ion-icon {
+    color: black !important;
+}
+
+.social h2 {
+    position: relative;
+    bottom: 10px;
+    left: 150px;
+    color: white;
+    justify-content: right;
+    letter-spacing: 4px;
+}
